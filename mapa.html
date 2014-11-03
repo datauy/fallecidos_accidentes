@@ -49,6 +49,7 @@
 
     var layerUrl = 'http://lndata.cartodb.com/api/v2/viz/0f6f37c8-62ed-11e4-8b3a-0e4fddd5de28/viz.json';
 
+
     var sublayers = [];
 
     cartodb.createLayer(map, layerUrl)
@@ -56,8 +57,8 @@
       .on('done', function(layer) {
         // change the query for the first layer
         var subLayerOptions = {
-          sql: "SELECT * FROM geo",
-          cartocss: "#geo{marker-fill: #F84F40; marker-width: 8; marker-line-color: white; marker-line-width: 2; marker-clip: false; marker-allow-overlap: true;}"
+          sql: "SELECT * FROM geo"
+          //,cartocss: "#geo{marker-fill: #F84F40; marker-width: 8; marker-line-color: white; marker-line-width: 2; marker-clip: false; marker-allow-overlap: true;}"
         }
 
         var sublayer = layer.getSubLayer(0);
